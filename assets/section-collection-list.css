@@ -1,0 +1,110 @@
+.collection-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  justify-content: center;
+}
+
+.collection-list-title {
+  margin: 0;
+}
+.collection-list .card__inner {
+  background: none;
+}
+.collection-list .card__content .card__heading {
+  color: rgb(var(--color-button-text));
+  text-align: center;
+}
+.collection-list .card-wrapper {
+  background: currentColor;
+  overflow: hidden;
+  padding: 15% 25%;
+}
+.collection-list .card--standard>.card__content {
+  padding: 0;
+}
+/* shape image */
+.type1 .card-wrapper {
+  border-radius: 70% 30% 64% 36% / 20% 52% 48% 80%;
+}
+.type2 .card-wrapper {
+  border-radius: 41% 59% 49% 51% / 20% 69% 31% 80%;
+}
+.type3 .card-wrapper {
+  border-radius: 100% 40% 86% 42%/49% 31% 69% 51%; 
+}
+.type4 .card-wrapper {
+  border-radius: 65% 35% 75% 30%/50% 30% 70% 50%;
+}
+.type5 .card-wrapper {
+  border-radius: 65% 35% 55% 45% / 49% 31% 69% 51% ;
+}
+.type6 .card-wrapper {
+  border-radius: 40% 60% 55% 45% / 49% 31% 69% 51%;
+}
+.type7 .card-wrapper {
+  border-radius: 40% 60% 40% 68%/50% 30% 90% 50%;
+}
+.type8 .card-wrapper {
+  border-radius: 50% 80% 40% 66%/85% 40% 80% 50%;
+}
+.type9 .card-wrapper {
+  border-radius: 33% 67% 34% 66% / 71% 29% 71% 29%;
+}
+.type10 .card-wrapper {
+  border-radius: 33% 67% 59% 41% / 71% 66% 34% 29%;
+}
+.collection-list .card__media .media img {
+  object-fit: contain;
+}
+@media screen and (max-width: 749px) {
+  .collection-list:not(.slider) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-collection-list .page-width {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .section-collection-list .collection-list:not(.slider) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.collection-list__item:only-child {
+  max-width: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 749px) {
+  .slider.collection-list--1-items {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+  .slider.collection-list--1-items,
+  .slider.collection-list--2-items,
+  .slider.collection-list--3-items,
+  .slider.collection-list--4-items {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .collection-list__item a:hover {
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  .collection-list.slider .collection-list__item {
+    max-width: 100%;
+  }
+}
+
+.collection-list-view-all {
+  margin-top: 2rem;
+}

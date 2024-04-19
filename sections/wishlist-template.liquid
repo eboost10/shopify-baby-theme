@@ -1,0 +1,91 @@
+{{ 'component-wishlist.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  #wishlistPage {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    #wishlistPage {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div id="wishlistPage" class="gradient color-{{ section.settings.color_scheme }}">
+    <div class="page page-wishlist">
+        <div class="page-width">
+           
+            <div class="section-header text-left">
+                <h1 class="title">{{ page_title }}</h1>
+            </div>
+            {% if page.content.size > 0 %}
+                <div class="rte mb-5">
+                    {{ page.content }}
+                </div>
+            {% endif %}
+            <div class="wishlist_table_wrapper">
+                <table class="wishlist_table" data-wishlist-content>
+                   
+                    <tbody data-wishlist-container>
+                    </tbody>
+                </table>
+            </div>
+            <div class="wishlist-footer">
+                <div class="button-share text-center">
+                    <a class="share" href="mailto:?subject= {{ page.title | strip_html }}&amp;body=">
+                        <svg  viewBox="0 0 512 512" class="icon icon-email" id="icon-email" >
+                            <path fill="currentColor" d="M464 64H48C21.5 64 0 85.5 0 112v288c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM48 96h416c8.8 0 16 7.2 16 16v41.4c-21.9 18.5-53.2 44-150.6 121.3-16.9 13.4-50.2 45.7-73.4 45.3-23.2.4-56.6-31.9-73.4-45.3C85.2 197.4 53.9 171.9 32 153.4V112c0-8.8 7.2-16 16-16zm416 320H48c-8.8 0-16-7.2-16-16V195c22.8 18.7 58.8 47.6 130.7 104.7 20.5 16.4 56.7 52.5 93.3 52.3 36.4.3 72.3-35.5 93.3-52.3 71.9-57.1 107.9-86 130.7-104.7v205c0 8.8-7.2 16-16 16z" class=""></path>
+                        </svg>
+                        <span class="text">{{ 'general.wishlist.share_wishlist' | t }}</span>
+                    </a>
+                </div>
+                <div class="mt-5 pagination-wrapper text-right">
+                    <ul id="wishlist_pagination" class="list--inline pagination"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Wishlist",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "class": "section",
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+  
+}
+{% endschema %}

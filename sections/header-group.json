@@ -1,0 +1,253 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement-bar-0": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
+          }
+        },
+        "announcement_KBKxDm": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Shipping over $100",
+            "link": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "announcement-bar-0",
+        "announcement_KBKxDm"
+      ],
+      "settings": {
+        "color_scheme": "scheme-5",
+        "show_line_separator": true,
+        "show_social": false,
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "color_Rbwm8j": {
+          "type": "color",
+          "settings": {
+            "color": "#dd1d1d",
+            "url_color": "shopify://collections/sale"
+          }
+        },
+        "color_78jmK9": {
+          "type": "color",
+          "settings": {
+            "color": "#d11f8f",
+            "url_color": "shopify://collections/hydrogen"
+          }
+        },
+        "icon_LQYXKe": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/5.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/adipiscing-elit"
+          }
+        },
+        "icon_HKERLG": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/3.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/consectetur"
+          }
+        },
+        "icon_CnXmfD": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/6.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/dolor-sit-amet"
+          }
+        },
+        "icon_wy7wfx": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/7.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/nam-suscipit"
+          }
+        },
+        "icon_G46MyP": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/7.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/quis-sit-amet-eros"
+          }
+        },
+        "icon_GPUiEw": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/8.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/iaculis"
+          }
+        },
+        "icon_GGP3J3": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/1.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/an-darius-ut-augue"
+          }
+        },
+        "icon_YxmC6G": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/4.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/malesuada"
+          }
+        },
+        "icon_ckhwhL": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/2.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/elementum"
+          }
+        },
+        "icon_n8mcX3": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/5.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/sed"
+          }
+        },
+        "icon_w6Awgz": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/3.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/euismod"
+          }
+        },
+        "icon_ANeBhf": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/6.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/feugiat"
+          }
+        },
+        "icon_FcNQ73": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/7.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/lectus-et-justo"
+          }
+        },
+        "icon_3YHEW8": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/8.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/felis-id-metus"
+          }
+        },
+        "icon_i64wij": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/1.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/nulla-non"
+          }
+        },
+        "icon_M7iD8b": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/4.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/erat"
+          }
+        },
+        "icon_3wAG7b": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/2.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/cum-sociis-natoque"
+          }
+        },
+        "icon_JLiV8H": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/1.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/vel-malesuada"
+          }
+        },
+        "icon_GPffiJ": {
+          "type": "icon",
+          "settings": {
+            "icon": "shopify://shop_images/8.png",
+            "width_icon": 30,
+            "url_icon": "shopify://collections/penatibus-et-magnis"
+          }
+        }
+      },
+      "block_order": [
+        "color_Rbwm8j",
+        "color_78jmK9",
+        "icon_LQYXKe",
+        "icon_HKERLG",
+        "icon_CnXmfD",
+        "icon_wy7wfx",
+        "icon_G46MyP",
+        "icon_GPUiEw",
+        "icon_GGP3J3",
+        "icon_YxmC6G",
+        "icon_ckhwhL",
+        "icon_n8mcX3",
+        "icon_w6Awgz",
+        "icon_ANeBhf",
+        "icon_FcNQ73",
+        "icon_3YHEW8",
+        "icon_i64wij",
+        "icon_M7iD8b",
+        "icon_3wAG7b",
+        "icon_JLiV8H",
+        "icon_GPffiJ"
+      ],
+      "settings": {
+        "logo_position": "top-center",
+        "menu": "main-menu",
+        "show_img": true,
+        "menu_type_desktop": "mega",
+        "sticky_header_type": "reduce-logo-size",
+        "show_line_separator": true,
+        "color_scheme": "scheme-4",
+        "menu_color_scheme": "scheme-f66257a5-0555-48ab-9120-3b430b459eb7",
+        "enable-header-wishlist": true,
+        "enable_country_selector": true,
+        "enable_language_selector": true,
+        "mobile_logo_position": "center",
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

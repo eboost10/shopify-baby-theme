@@ -1,0 +1,86 @@
+.free-style-section .title-wrapper{
+	flex-flow: column;
+}
+.free-style-section .block {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 1rem;
+	max-width: 100vw;
+}
+.free-style-section .block-button {
+	background: rgb(var(--color-button));
+	color: rgb(var(--color-button-text));
+}
+
+.free-style-section .block-img img {
+	object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    border: .5rem solid rgb(var(--color-foreground));
+}
+.free-style-section .block-text {
+	background: rgb(var(--color-secondary-button));
+	color: rgb(var(--color-secondary-button-text));
+}
+.free-style-section .block-text  *{
+	color: rgb(var(--color-secondary-button-text));
+}
+.free-style-section .block-text p {
+	margin: 0;
+	padding: 3rem;
+}
+.free-style-section .block-button a {
+	text-decoration: none;
+	color: var(--color-button-text);
+}
+.block.type1 img,
+.block.type1  {
+  border-radius: 90% 80% 90% 90%/76% 70% 100% 90%;
+}
+.block.type2 img,
+.block.type2  {
+  border-radius: 50% 60% 50% 70%/40% 70% 50% 80%;
+}
+.block.type3 img,
+.block.type3  {
+  border-radius: 100% 40% 86% 42%/49% 31% 69% 51%; 
+}
+.block.type4 img,
+.block.type4  {
+  border-radius: 65% 35% 75% 30%/50% 30% 70% 50%;
+}
+.block.type5 img,
+.block.type5  {
+  border-radius: 65% 35% 55% 45% / 49% 31% 69% 51% ;
+}
+.block.type6 img,
+.block.type6  {
+  border-radius: 40% 60% 55% 45% / 49% 31% 69% 51%;
+}
+.block.type7 img,
+.block.type7  {
+  border-radius: 40% 60% 40% 68%/50% 30% 90% 50%;
+}
+.block.type8 img,
+.block.type8  {
+  border-radius: 50% 80% 40% 66%/85% 40% 80% 50%;
+}
+.block.type9 img,
+.block.type9  {
+  border-radius: 33% 67% 34% 66% / 71% 29% 71% 29%;
+}
+.block.type10 img,
+.block.type10  {
+  border-radius: 33% 67% 59% 41% / 71% 66% 34% 29%;
+}
+.blocks-free-style {
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	align-items: center;
+	column-gap: var(--grid-desktop-horizontal-spacing);
+    row-gap: var(--grid-desktop-vertical-spacing);
+}

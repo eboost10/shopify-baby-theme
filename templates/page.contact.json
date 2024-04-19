@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "How Can We Help? Do you have cookie questions? Is there a question about your order? Let us know how we can help. Email us at: stores@domain.com",
+        "heading_size": "h2",
+        "company_info": "<h2>Store Infomation</h2><p><strong>Mail us at: </strong>23 ABC, TAN st, HCM city, Vietnam.</p><p><br/><strong>Tell us:</strong>0123456989<br/><strong>Email:</strong><a href=\"mailto:support@baby.com\" target=\"_blank\" title=\"mailto:support@baby.com\">support@baby.com</a><br/></p><p><br/><strong>Opening Hours:</strong><br/>Monday to Saturday: 9am - 10pm<br/>Sundays: 10am - 6pm</p>",
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 152
+      }
+    }
+  },
+  "order": [
+    "form"
+  ]
+}

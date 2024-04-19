@@ -1,0 +1,145 @@
+
+{{ 'component-icon-with-text.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="home-icon-with-text section-{{ section.id }}-padding gradient color-{{ section.settings.section_color_scheme }}">
+  <div class="page-width">
+        <div class="grid grid--1-col grid--2-col-tablet grid--{{section.settings.column}}-col-desktop">
+            {% for block in section.blocks %}
+                <div class="grid__item ">
+                    <div class="icon-with-text {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                      {% if settings.animations_reveal_on_scroll %}
+                        data-cascade
+                        style="--animation-order: {{ forloop.index }};"
+                      {% endif %}
+                    >
+                        <div class="icon-with-text__icon"{% if section.settings.custom_color %} style="color: {{ section.settings.color_icon }}; fill: {{ section.settings.color_icon }}"{% endif %}>
+                            {% if block.settings.icon != blank %}
+                                {{ block.settings.icon }}
+                            {% else %}
+                                {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }} 
+                            {% endif %}
+                        </div>
+                        <div class="icon-with-text__content">
+                            {% if block.settings.title != blank %}
+                                <h3 class="title"{% if section.settings.custom_color %} style="color: {{ section.settings.color_title }}"{% endif %}>{{ block.settings.title }}</h3>
+                            {% endif %}
+                            {% if block.settings.description != blank %}
+                                <p class="description"{% if section.settings.custom_color %} style="color: {{ section.settings.color_description }}"{% endif %}>{{ block.settings.description }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Icon With Text",
+    "max_blocks": 20,
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+          "type": "color_scheme",
+          "id": "section_color_scheme",
+          "label": "t:sections.all.colors.label",
+          "default": "scheme-1"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 36
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 200,
+          "step": 4,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 36
+        },
+        {
+            "type": "header",
+            "content": "Layout"
+        },
+        {
+            "type": "range",
+            "id": "column",
+            "label": "Column show",
+            "min": 1,
+            "max": 6,
+            "step": 1,
+            "default": 4
+        }
+    ],
+    "blocks": [
+        {
+            "type": "icon_item",
+            "name": "Another image",
+            "settings": [
+                {
+                    "type": "textarea",
+                    "id": "icon",
+                    "label": "Icon",
+                    "info": "Use SVG Icon to load pages faster [(Where do I find SVG Icon)](https:\/\/www.flaticon.com)"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title",
+                    "default": "Icon With text"
+                },
+                {
+                    "type": "text",
+                    "id": "description",
+                    "label": "Description",
+                    "default": "Description For Icon With text"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Icon With Text",
+            "category": "Icons",
+            "blocks": [
+                {
+                    "type": "icon_item"
+                },
+                {
+                    "type": "icon_item"
+                },
+                {
+                    "type": "icon_item"
+                },
+                {
+                    "type": "icon_item"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}
+

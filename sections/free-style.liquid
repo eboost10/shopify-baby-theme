@@ -1,0 +1,498 @@
+
+{{ 'section-free-style.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class=" color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
+  <div class="free-style-section page-width">
+        {%- unless section.settings.heading == blank -%}
+          <div class="title-wrapper text-center  title-wrapper--no-top-margin">
+            <h2
+              id="SectionHeading-{{ section.id }}"
+              class="inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            >
+              {{ section.settings.heading }}
+            </h2>
+
+            {%- if section.settings.subtext  -%}
+            <div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+              {{ section.settings.subtext }}
+            </div>
+            {%- endif -%}
+          </div>
+        {%- endunless -%}
+        <div class="blocks-free-style">
+        {%- for block in section.blocks -%}
+          <div
+            class="free-type-block {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            {{ block.shopify_attributes }}
+            {% if settings.animations_reveal_on_scroll %}
+              data-cascade
+              style="--animation-order: {{ forloop.index }};"
+            {% endif %}
+          >
+           
+
+            {%- case block.type -%}
+              {%- when 'title' -%}
+          
+              {%- if block.settings.heading != blank -%}
+              <div class="block block-text  {{ block.settings.shape }}" style="width: {{ block.settings.width }}px;height: {{ block.settings.width }}px;">
+                <div class="{{ block.settings.heading_size }}">{{- block.settings.heading -}}</div>
+              </div>
+              {%- endif -%}
+              {%- when 'text' -%}
+                {%- if block.settings.subtext != blank -%}
+                <div class="block block-text {{ block.settings.shape }}" style="width: {{ block.settings.width }}px;height: {{ block.settings.width }}px;">
+                  {{- block.settings.subtext -}}
+                </div>
+              {%- endif -%}
+              {%- when 'button' -%}
+                {%- if block.settings.url != blank and block.settings.label != blank-%}
+                  <div class="block block-button {{ block.settings.shape }}" style="width: {{ block.settings.width }}px;height: {{ block.settings.width }}px;">
+                    <a href="{{block.settings.url}}">{{ block.settings.label}}</a>
+                  </div>
+                  </ul>
+                {%- endif -%}
+              {%- when 'image' -%}
+                <div class="block block-img {{ block.settings.shape }}" style="width: {{ block.settings.width }}px;height: {{ block.settings.width }}px;">
+                  {%- if block.settings.image != blank -%}
+                    {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                  
+                      <img
+                        srcset="{{ block.settings.image | image_url: width: block.settings.image_width }}, {{ block.settings.image | image_url: width: image_size_2x }} 2x"
+                        src="{{ block.settings.image | image_url: width: 760 }}"
+                        alt="{{ block.settings.image.alt | escape }}"
+                        loading="lazy"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.height }}"
+                      >
+
+                  {%- else -%}
+                    {{ 'image' | placeholder_svg_tag: 'placeholder-svg placeholder' }}
+                  {%- endif -%}
+                </div>
+            {%- endcase -%}
+          </div>
+        {%- endfor -%}
+        </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Free style",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "class": "section",
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Title",
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Heading",
+          "label": "Heading"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "min": 50,
+          "max": 550,
+          "step": 5,
+          "unit": "px",
+          "label": "Width",
+          "default": 100
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "t:sections.all.heading_size.options__1.label"
+            },
+            {
+              "value": "h1",
+              "label": "t:sections.all.heading_size.options__2.label"
+            },
+            {
+              "value": "h0",
+              "label": "t:sections.all.heading_size.options__3.label"
+            }
+          ],
+          "default": "h1",
+          "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "select",
+          "id": "shape",
+          "options": [
+            {
+              "value": "type1",
+              "label": "Type 1"
+            },
+            {
+              "value": "type2",
+              "label": "Type 2"
+            },
+            {
+              "value": "type3",
+              "label": "Type 3"
+            },
+            {
+              "value": "type4",
+              "label": "Type 4"
+            },
+            {
+              "value": "type5",
+              "label": "Type 5"
+            },
+            {
+              "value": "type6",
+              "label": "Type 6"
+            },
+            {
+              "value": "type7",
+              "label": "Type 7"
+            },
+            {
+              "value": "type8",
+              "label": "Type 8"
+            },
+            {
+              "value": "type9",
+              "label": "Type 9"
+            },
+            {
+              "value": "type10",
+              "label": "Type 10"
+            }
+          ],
+          "default": "type1",
+          "label": "Shaper"
+        }
+      ]
+    },
+   
+    {
+      "type": "text",
+      "name": "Rich text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
+          "label": "t:sections.footer.blocks.text.settings.subtext.label"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "min": 50,
+          "max": 550,
+          "step": 5,
+          "unit": "px",
+          "label": "Width",
+          "default": 100
+        },
+        {
+          "type": "select",
+          "id": "shape",
+          "options": [
+            {
+              "value": "type1",
+              "label": "Type 1"
+            },
+            {
+              "value": "type2",
+              "label": "Type 2"
+            },
+            {
+              "value": "type3",
+              "label": "Type 3"
+            },
+            {
+              "value": "type4",
+              "label": "Type 4"
+            },
+            {
+              "value": "type5",
+              "label": "Type 5"
+            },
+            {
+              "value": "type6",
+              "label": "Type 6"
+            },
+            {
+              "value": "type7",
+              "label": "Type 7"
+            },
+            {
+              "value": "type8",
+              "label": "Type 8"
+            },
+            {
+              "value": "type9",
+              "label": "Type 9"
+            },
+            {
+              "value": "type10",
+              "label": "Type 10"
+            }
+          ],
+          "default": "type1",
+          "label": "Shape"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "min": 50,
+          "max": 550,
+          "step": 5,
+          "unit": "px",
+          "label": "Width",
+          "default": 100
+        },
+        {
+          "type": "select",
+          "id": "shape",
+          "options": [
+            {
+              "value": "type1",
+              "label": "Type 1"
+            },
+            {
+              "value": "type2",
+              "label": "Type 2"
+            },
+            {
+              "value": "type3",
+              "label": "Type 3"
+            },
+            {
+              "value": "type4",
+              "label": "Type 4"
+            },
+            {
+              "value": "type5",
+              "label": "Type 5"
+            },
+            {
+              "value": "type6",
+              "label": "Type 6"
+            },
+            {
+              "value": "type7",
+              "label": "Type 7"
+            },
+            {
+              "value": "type8",
+              "label": "Type 8"
+            },
+            {
+              "value": "type9",
+              "label": "Type 9"
+            },
+            {
+              "value": "type10",
+              "label": "Type 10"
+            }
+          ],
+          "default": "type1",
+          "label": "Shape"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Url"
+        },
+        {
+          "type": "range",
+          "id": "width",
+          "min": 50,
+          "max": 550,
+          "step": 5,
+          "unit": "px",
+          "label": "Width",
+          "default": 100
+        },
+        {
+          "type": "select",
+          "id": "shape",
+          "options": [
+            {
+              "value": "type1",
+              "label": "Type 1"
+            },
+            {
+              "value": "type2",
+              "label": "Type 2"
+            },
+            {
+              "value": "type3",
+              "label": "Type 3"
+            },
+            {
+              "value": "type4",
+              "label": "Type 4"
+            },
+            {
+              "value": "type5",
+              "label": "Type 5"
+            },
+            {
+              "value": "type6",
+              "label": "Type 6"
+            },
+            {
+              "value": "type7",
+              "label": "Type 7"
+            },
+            {
+              "value": "type8",
+              "label": "Type 8"
+            },
+            {
+              "value": "type9",
+              "label": "Type 9"
+            },
+            {
+              "value": "type10",
+              "label": "Type 10"
+            }
+          ],
+          "default": "type1",
+          "label": "Shape"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+    {
+        "type": "inline_richtext",
+        "id": "heading",
+        "default": "Free Style",
+        "label": "Heading"
+      },
+      {
+        "type": "select",
+        "id": "heading_size",
+        "options": [
+          {
+            "value": "h2",
+            "label": "t:sections.all.heading_size.options__1.label"
+          },
+          {
+            "value": "h1",
+            "label": "t:sections.all.heading_size.options__2.label"
+          },
+          {
+            "value": "h0",
+            "label": "t:sections.all.heading_size.options__3.label"
+          }
+        ],
+        "default": "h1",
+        "label": "t:sections.all.heading_size.label"
+      },
+      {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
+          "label": "t:sections.footer.blocks.text.settings.subtext.label"
+        },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Free style",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "title"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "text"
+        }
+      ]
+    }
+  ]
+  
+}
+{% endschema %}

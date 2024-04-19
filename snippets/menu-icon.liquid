@@ -1,0 +1,10 @@
+<style>
+	.list-menu ul ul li a[href="{{ block.settings.url_icon}}"] {
+		padding-left: {{ block.settings.width_icon }}px;
+		background:url({{ block.settings.icon | image_url:  width: block.settings.width_icon }}) no-repeat left center;
+		background-size: {{ block.settings.width_icon | minus: 10 }}px auto;
+	}
+	.menu-drawer__navigation .list-menu ul ul li a[href="{{ block.settings.url_icon}}"] {
+		margin-left: 1.5rem;
+	}
+</style>

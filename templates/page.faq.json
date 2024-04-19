@@ -1,0 +1,106 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 152
+      }
+    },
+    "collapsible_content_4jpttg": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_UXPEze": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Will your template be fully compatible with Shopify?",
+            "icon": "none",
+            "row_content": "<p>Yes it is.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_abVEhf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer free trials?",
+            "icon": "none",
+            "row_content": "<p>No, We don't</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_9iHX49": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you offer refund or exchange?",
+            "icon": "none",
+            "row_content": "<p><em>All purchases at Cosmetic are covered by our \"Money Back Cosmetic Policy\". If you're not satisfied with your themes and/or add-ons / plugins / extensions, we will try our very best to help you as much as possible.</em></p><p><strong>In case our templates or extensions get any issue that we cannot help, we will refund the full price you paid immediately.</strong></p><p>WHY A REFUND MAY NOT BE GIVEN</p><ol><li>You don't want it after you've downloaded it.<br/>    \tThe item did not meet your expectations.<br/>    \tYou simply change your mind.<br/>    \tYou bought an item by mistake<br/>    \tYou do not have sufficient expertise to use the item.<br/>    \tYou ask for goodwill, or<br/>    \tYou can no longer access the item because it has been removed / discontinue (we advise you to download items as soon as you have purchased them to avoid this situation).<br/>    \tRefund is not applicable on Custom Service (such as custom development works, consulting works and any order services we provide)</li></ol><p>A REFUND MAY BE GIVEN</p><p>1. Product Not-As-Described</p><p>Such issues should be reported to our Technical Support Department within 7 days from the date of the purchase. Clear evidence must be provided proving that the purchased product is not as it is described on the website. Complaints which are based merely on the customers false expectations or wishes are not honored.</p><p>2. Major Defects</p><p>Although all the products are thoroughly tested before release, unexpected errors may occur. Such issues must be submitted for our Technical Support Department. We keep the right to rectify the error or defect within 72 hours (exclude Sartuday and Sunday). Please note that our technicians can request temporary access to your server in order to identify and fix the possible issues with our Products. Failure to provide such access in a timely manner may result in a delayed resolution of the issue. Refusal to provide access to your sever will result in your inability to qualify for a refund.</p><p>3. Item support extension not used</p><p>If you purchase an item support extension and request a refund of that extension before your existing item support expires, we will provide you with a refund of that item support extension.</p><p></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_GRDgmY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "What I have to do when I need your support?",
+            "icon": "none",
+            "row_content": "<p>To save your time and reach our support quickly, please follow below steps:</p><p>1/ Create a staff account for us (with Themes permission and Settings permission) <a href=\"http://docs.shopify.com/manual/settings/account/staff-members\" title=\"http://docs.shopify.com/manual/settings/account/staff-members\">http://docs.shopify.com/manual/settings/account/staff-members</a></p><p>2/ Capture screenshot or video for the issue you get.</p><p>3/ Specify which template and version you are using.</p><p>4/ Describe clearly how to reproduce the issue.</p><p>5/ Send all information (staff account, screenshot, video, template name and version, description of the issues, link) to <a href=\"mailto:eboost10@gmail.com\" title=\"mailto:eboost10@gmail.com\">eboost10@gmail.com</a></p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_s": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Would assistance be available to upload the template if needed?",
+            "icon": "none",
+            "row_content": "<p>Yes, we will assist you to install the template if needed</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_m": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Do you guys offer customisation services for your themes?",
+            "icon": "none",
+            "row_content": "<p>Yes, we do. Please send your customisation requests to <a href=\"mailto:eboost10@gmail.com\" title=\"mailto:eboost10@gmail.com\">eboost10@gmail.com</a>, we will give you our quote. Thank you.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_g": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Can I turn on/off Lazy Loading Image / Item Animation / Fade Up on the page?",
+            "icon": "none",
+            "row_content": "<p>Yes. You can turn on/off the animation in the Setting page.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_UXPEze",
+        "collapsible_row_abVEhf",
+        "collapsible_row_9iHX49",
+        "collapsible_row_GRDgmY",
+        "collapsible_row_s",
+        "collapsible_row_m",
+        "collapsible_row_g"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Pre-Sales Questions",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "layout": "row",
+        "color_scheme": "scheme-2168fce5-8d59-47c3-bd79-5e5d78f90df4",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 36,
+        "padding_bottom": 152
+      }
+    }
+  },
+  "order": [
+    "main",
+    "collapsible_content_4jpttg"
+  ]
+}

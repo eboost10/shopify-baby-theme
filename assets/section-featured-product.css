@@ -1,0 +1,138 @@
+.featured-product .product__media-list {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.featured-product .product-media-container {
+  margin-bottom: var(--media-shadow-vertical-offset);
+  max-width: 100%;
+}
+
+.featured-product .product__media-item {
+  padding-left: 0;
+  width: 100%;
+}
+
+.featured-product .product__media-item:not(:first-child) {
+  display: none;
+}
+
+.featured-product .placeholder-svg {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.background-secondary .featured-product {
+  padding: 2.5rem;
+}
+
+.featured-product .share-button:nth-last-child(2) {
+  display: inline-flex;
+}
+
+.share-button + .product__view-details {
+  display: inline-flex;
+  float: right;
+  align-items: center;
+  min-height: 4.4rem;
+}
+
+.share-button + .product__view-details::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+@media screen and (min-width: 750px) {
+  .featured-product .product__media-item {
+    padding-bottom: 0;
+  }
+
+  .background-secondary .featured-product {
+    padding: 5rem;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .background-secondary .featured-product:not(.product--no-media) > .product__info-wrapper {
+    padding: 0 0 0 5rem;
+  }
+
+  .background-secondary .featured-product:not(.product--no-media).product--right > .product__info-wrapper {
+    padding: 0 5rem 0 0;
+  }
+
+  .featured-product:not(.product--no-media) > .product__info-wrapper {
+    padding: 0 7rem;
+  }
+
+  .background-secondary .featured-product {
+    padding: 6rem 7rem;
+    position: relative;
+    z-index: 1;
+  }
+}
+/* shape image */
+.type1 .product__media  {
+  border-radius: 70% 30% 64% 36% / 20% 52% 48% 80%;
+}
+.type2 .product__media  {
+  border-radius: 41% 59% 49% 51% / 20% 69% 31% 80%;
+}
+.type3 .product__media  {
+  border-radius: 100% 40% 86% 42%/49% 31% 69% 51%; 
+}
+.type4 .product__media  {
+  border-radius: 65% 35% 75% 30%/50% 30% 70% 50%;
+}
+.type5 .product__media  {
+  border-radius: 65% 35% 55% 45% / 49% 31% 69% 51% ;
+}
+.type6 .product__media  {
+  border-radius: 40% 60% 55% 45% / 49% 31% 69% 51%;
+}
+.type7 .product__media  {
+  border-radius: 40% 60% 40% 68%/50% 30% 90% 50%;
+}
+.type8 .product__media  {
+  border-radius: 50% 80% 40% 66%/85% 40% 80% 50%;
+}
+.type9 .product__media  {
+  border-radius: 33% 67% 34% 66% / 71% 29% 71% 29%;
+}
+.type10 .product__media  {
+  border-radius: 33% 67% 59% 41% / 71% 66% 34% 29%;
+}
+.featured-product {
+  align-items: center;
+}
+.featured-product .product__media {
+  border: .5rem solid rgba(var(--color-button),.1);
+}
+.featured-product .hide-option_title  legend.form__label{
+  display: none;
+}
+.featured-product .product-form__submit {
+  position: absolute;
+  bottom: -88%;
+  left: -30%;
+}
+.featured-product .product-form__input--pill input[type=radio]+label {
+  width: 100%;
+}
+.featured-product .product__media-icon {
+  display: none;
+}
+@media(max-width: 749px){
+  .featured-product .product-form__submit {
+    bottom: auto;
+    left: 50%;
+    top: -80%;
+    width: 12rem;
+    height: 12rem;
+    padding: 0;
+    margin: 0;
+  }
+}

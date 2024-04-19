@@ -1,0 +1,94 @@
+.blog-placeholder-svg {
+  height: 100%;
+}
+
+@media screen and (min-width: 990px) {
+  .grid--1-col-desktop .article-card .card__content {
+    text-align: center;
+  }
+}
+
+.blog__title {
+  margin: 0;
+}
+
+.blog__posts.articles-wrapper {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 990px) {
+  .blog__posts.articles-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+.blog__posts.articles-wrapper .article {
+  scroll-snap-align: start;
+}
+
+@media screen and (max-width: 749px) {
+  .blog__post.article {
+    width: calc(100% - 3rem - var(--grid-mobile-horizontal-spacing));
+  }
+}
+
+.background-secondary .blog-placeholder__content {
+  background-color: rgb(var(--color-background));
+}
+
+.blog__posts .card-wrapper {
+  width: 100%;
+}
+
+.blog__button {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .blog__button {
+    margin-top: 5rem;
+  }
+}
+
+/* check for flexbox gap in older Safari versions */
+@supports not (inset: 10px) {
+  @media screen and (min-width: 750px) {
+    .blog__posts .article + .article {
+      margin-left: var(--grid-desktop-horizontal-spacing);
+    }
+  }
+}
+.article-card__image {
+  border: .5rem solid rgba(var(--color-button),.75);
+}
+/* shape image */
+.type1 .article-card__image {
+  border-radius: 70% 30% 64% 36% / 20% 52% 48% 80%;
+}
+.type2 .article-card__image {
+  border-radius: 41% 59% 49% 51% / 20% 69% 31% 80%;
+}
+.type3 .article-card__image {
+  border-radius: 100% 40% 86% 42%/49% 31% 69% 51%; 
+}
+.type4 .article-card__image {
+  border-radius: 65% 35% 75% 30%/50% 30% 70% 50%;
+}
+.type5 .article-card__image {
+  border-radius: 65% 35% 55% 45% / 49% 31% 69% 51% ;
+}
+.type6 .article-card__image {
+  border-radius: 40% 60% 55% 45% / 49% 31% 69% 51%;
+}
+.type7 .article-card__image {
+  border-radius: 40% 60% 40% 68%/50% 30% 90% 50%;
+}
+.type8 .article-card__image {
+  border-radius: 50% 80% 40% 66%/85% 40% 80% 50%;
+}
+.type9 .article-card__image {
+  border-radius: 33% 67% 34% 66% / 71% 29% 71% 29%;
+}
+.type10 .article-card__image {
+  border-radius: 33% 67% 59% 41% / 71% 66% 34% 29%;
+}
