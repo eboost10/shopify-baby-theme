@@ -37,7 +37,9 @@ var eboost = '';
         	})
         },
         moveQuantityBox: function(){
+
         	if($('.product-form__input.product-form__quantity').length > 0 && $('.buttons-top').length > 0){
+        		$('.buttons-top .product-form__input.product-form__quantity').remove()
         		$('.buttons-top').prepend($('.product-form__input.product-form__quantity'))
         	}
         },
