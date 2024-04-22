@@ -116,7 +116,6 @@ Key: countdown
 
 ## SETTING TO SHOW WISHLIST
 
-![BABY Screenshot](docs/baby-shopify-theme-config.jpg)
 
 1. Go to Online Store -> Themes -> Customize button -> Settings
 
