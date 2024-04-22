@@ -36,7 +36,7 @@ Password: 1234
 ![BABY Screenshot](docs/baby-shopify-theme-menu.jpg)
 
 
-#Add color for top level
+### Add color for top level
 
 1. Go to Online Store -> Themes -> Customize button
 2. Sections -> Header  Sections -> Add block -> Color Menu
@@ -46,11 +46,11 @@ Password: 1234
 ![BABY Screenshot](docs/Baby-Eboost-Demo-·-Customize-baby-·-Shopify-menu02.png)
 
 
-#Add color for 1 level
+### Add color for 1 level
 
 You only need add an image for collection after it will be shown here
 
-#Add icon for 2 level
+### Add icon for 2 level
 
 1. Go to Online Store -> Themes -> Customize button
 2. Sections -> Header  Sections -> Add block -> Icon
@@ -119,7 +119,7 @@ Key: countdown
 
 1. Go to Online Store -> Themes -> Customize button -> Settings
 
-2. Expand Product cards -> click Enable Wishlist? to show wishlist icon on card product and product detail page
+2. Expand Product cards -> click "Enable Wishlist?" to show wishlist icon on card product and product detail page
 
 ![BABY Screenshot](docs/baby-shopify-theme-config.jpg)
 
