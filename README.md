@@ -40,8 +40,11 @@ Password: 1234
 
 1. Go to Online Store -> Themes -> Customize button
 2. Sections -> Header  Sections -> Add block -> Color Menu
+
 ![BABY Screenshot](docs/Baby-Eboost-Demo-·-Customize-baby-·-Shopify-menu04.png)
+
 3. Select color -> Select url match url that you would like to show color
+
 ![BABY Screenshot](docs/Baby-Eboost-Demo-·-Customize-baby-·-Shopify-menu03.png)
 ![BABY Screenshot](docs/Baby-Eboost-Demo-·-Customize-baby-·-Shopify-menu02.png)
 
@@ -56,6 +59,7 @@ You only need add an image for collection after it will be shown here
 2. Sections -> Header  Sections -> Add block -> Icon
 3. Upload an icon 
 4. Select url match url that you would like to show icon
+
 ![BABY Screenshot](docs/Baby-Eboost-Demo-·-Customize-baby-·-Shopify-menu01.png)
 
 
@@ -102,6 +106,7 @@ To enbable countdown on product detail page. We need follow step by step below:
 
 Namespace: custom
 Key: countdown
+Type: Date and time
 
 ```
 ![BABY Screenshot](docs/Baby-Eboost-Demo-·-Product-metafield-definitions-·-Edit-countdown-·-Shopify.png)
